@@ -16,3 +16,7 @@ after_success:
   # Log into Docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Push images to Dockerhub
+  - docker push nate54o/multi-client
+  - docker push nate54o/multi-nginx
+  - docker push nate54o/multi-server
+  - docker push nate54o/multi-worker
